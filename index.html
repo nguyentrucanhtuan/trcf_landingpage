@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sách Pha Chế | 100+ Công Thức Hot Trend | CoffeeTree</title>
-  <meta name="description" content="Bí quyết pha chế sáng tạo thức uống xu hướng mới — 100+ công thức từ Founder Gardénia Coffee & Royaltea Việt Nam." />
+  <title>Sách Pha Chế | 60+ Công Thức Hot Trend | CoffeeTree</title>
+  <meta name="description" content="Bí quyết pha chế sáng tạo thức uống xu hướng mới — 60+ công thức từ Phạm Thị Thu — đồng sáng lập CoffeeTree 10 năm đào tạo." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <script>
     tailwind.config = {
@@ -152,7 +154,7 @@
     <!-- Desktop CTA + Mobile hamburger -->
     <div class="flex items-center gap-3">
       <a href="#order-form" class="hidden md:flex items-center gap-2 bg-primary hover:bg-primary-dk text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:shadow-lg">
-        Đặt Mua Ngay 
+        Đặt Mua Ngay
       </a>
       <button id="hamburger-btn" class="md:hidden text-ink p-1 font-bold text-2xl leading-none" onclick="toggleMobileMenu()">☰</button>
     </div>
@@ -193,7 +195,7 @@
       <div class="animate__animated animate__fadeInLeft">
         <!-- Label -->
         <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary rounded-full px-4 py-1.5 text-sm font-bold mb-6">
-          
+          <i data-lucide="book-open" class="w-4 h-4"></i>
           Sách Pha Chế Thực Chiến #1 Việt Nam
         </div>
 
@@ -205,7 +207,7 @@
         </h1>
 
         <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
-          <strong class="text-ink">100+ công thức pha chế hot trend</strong> — cà phê, trà sữa, đá xay, healthy drinks.
+          <strong class="text-ink">60+ công thức pha chế hot trend</strong> — cà phê, trà sữa, đá xay, healthy drinks.
           Bí quyết từ <em>Phạm Thị Thu</em> — đồng sáng lập <strong>CoffeeTree</strong> với 10 năm đào tạo & setup quán chuyên nghiệp.
         </p>
 
@@ -214,24 +216,27 @@
           <a href="#pricing"
             class="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dk text-white px-8 py-4 rounded-full font-black text-lg transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 transform">
             Đặt Mua Ngay — 399.000đ
-            
+            <i data-lucide="arrow-right" class="w-5 h-5 transition group-hover:translate-x-1"></i>
           </a>
           <a href="#benefits"
             class="flex items-center justify-center gap-2 border-2 border-primary/40 text-primary hover:border-primary hover:bg-primary/5 px-8 py-4 rounded-full font-bold text-base transition-all">
             Xem Nội Dung
-            
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
           </a>
         </div>
 
         <!-- Trust signals -->
         <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-500">
           <span class="flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-primary"></i>
             Cam kết hoàn tiền
           </span>
           <span class="flex items-center gap-1.5">
+            <i data-lucide="truck" class="w-4 h-4 text-primary"></i>
             Ship COD toàn quốc
           </span>
           <span class="flex items-center gap-1.5">
+            <i data-lucide="gift" class="w-4 h-4 text-accent"></i>
             Quà tặng 1.500.000đ
           </span>
         </div>
@@ -274,16 +279,16 @@
             </div>
           </div>
 
-          <!-- Badge: 100+ -->
+          <!-- Badge: 60+ -->
           <div class="pulse-badge absolute -top-5 -right-5 bg-accent text-white rounded-full w-20 h-20 flex flex-col items-center justify-center shadow-xl text-center">
-            <span class="text-2xl font-black leading-none">100+</span>
+            <span class="text-2xl font-black leading-none">60+</span>
             <span class="text-[10px] font-semibold leading-tight">Công thức</span>
           </div>
 
           <!-- Mini card: bonuses -->
           <div class="absolute -bottom-5 -left-8 bg-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3 border border-cream-dk">
             <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
-              
+              <i data-lucide="gift" class="w-5 h-5 text-accent"></i>
             </div>
             <div>
               <p class="text-xs text-gray-500">Tặng kèm</p>
@@ -314,7 +319,7 @@
         <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Quán đã setup</p>
       </div>
       <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk" style="transition-delay:.2s">
-        <p class="text-4xl font-serif font-black text-primary num" data-target="100">0</p>
+        <p class="text-4xl font-serif font-black text-primary num" data-target="60">0</p>
         <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Công thức độc quyền</p>
       </div>
       <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk" style="transition-delay:.3s">
@@ -354,7 +359,7 @@
       <!-- Pain 1 -->
       <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition">
         <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
-          
+          <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
         </div>
         <div>
           <h4 class="font-bold text-white mb-1">Menu nhàm chán, khách không quay lại</h4>
@@ -364,7 +369,7 @@
       <!-- Pain 2 -->
       <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.1s">
         <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
-          
+          <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
         </div>
         <div>
           <h4 class="font-bold text-white mb-1">Định giá mò mẫm, lợi nhuận thấp</h4>
@@ -374,7 +379,7 @@
       <!-- Pain 3 -->
       <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.15s">
         <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
-          
+          <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
         </div>
         <div>
           <h4 class="font-bold text-white mb-1">Không có signature drink riêng</h4>
@@ -384,7 +389,7 @@
       <!-- Pain 4 -->
       <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.2s">
         <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
-          
+          <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
         </div>
         <div>
           <h4 class="font-bold text-white mb-1">Marketing yếu, ít khách mới</h4>
@@ -397,7 +402,7 @@
     <div class="text-center mt-12">
       <div class="inline-flex flex-col items-center gap-2 text-gray-500">
         <p class="text-sm font-medium">Cuốn sách này giải quyết TẤT CẢ những vấn đề trên</p>
-        
+        <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce"></i>
       </div>
     </div>
   </div>
@@ -419,25 +424,25 @@
             <div class="space-y-4">
               <div class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                  
+                  <i data-lucide="check" class="w-3 h-3 text-white"></i>
                 </div>
-                <p class="text-white/80 text-sm leading-relaxed">100+ công thức đã kiểm chứng tại 3 chuỗi thương hiệu thực tế</p>
+                <p class="text-white/80 text-sm leading-relaxed">60+ công thức đã kiểm chứng tại 3 chuỗi thương hiệu thực tế</p>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                  
+                  <i data-lucide="check" class="w-3 h-3 text-white"></i>
                 </div>
                 <p class="text-white/80 text-sm leading-relaxed">Hệ thống quản lý chi phí & định giá đồ uống</p>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                  
+                  <i data-lucide="check" class="w-3 h-3 text-white"></i>
                 </div>
                 <p class="text-white/80 text-sm leading-relaxed">Chiến lược xây dựng menu bán hàng & signature drink</p>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                  
+                  <i data-lucide="check" class="w-3 h-3 text-white"></i>
                 </div>
                 <p class="text-white/80 text-sm leading-relaxed">Marketing storytelling thu hút khách hàng mới liên tục</p>
               </div>
@@ -470,7 +475,7 @@
         </p>
         <a href="#pricing" class="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-bold hover:bg-primary-dk transition-all shadow-md hover:shadow-lg">
           Tôi Muốn Cuốn Sách Này
-          
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
@@ -499,16 +504,16 @@
       <!-- B1 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card">
         <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="book-open" class="w-6 h-6 text-primary"></i>
         </div>
-        <h4 class="font-serif font-bold text-lg mb-2">100+ Công Thức Đa Dạng</h4>
+        <h4 class="font-serif font-bold text-lg mb-2">60+ Công Thức Đa Dạng</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Cà phê, trà sữa, đá xay, healthy drinks — tất cả xu hướng hot nhất 2024, sẵn sàng áp dụng ngay.</p>
       </div>
 
       <!-- B2 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.08s">
         <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="users" class="w-6 h-6 text-accent-dk"></i>
         </div>
         <h4 class="font-serif font-bold text-lg mb-2">Đọc Vị Khẩu Vị Khách Hàng</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Biết khách muốn gì trước khi họ nói — nghệ thuật tạo trải nghiệm uống khiến họ muốn quay lại.</p>
@@ -517,7 +522,7 @@
       <!-- B3 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.16s">
         <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="layout-grid" class="w-6 h-6 text-primary"></i>
         </div>
         <h4 class="font-serif font-bold text-lg mb-2">Xây Dựng Menu Chiến Lược</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Menu không chỉ đẹp mà còn được thiết kế để tăng giá trị đơn hàng trung bình và lợi nhuận.</p>
@@ -526,7 +531,7 @@
       <!-- B4 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.08s">
         <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="zap" class="w-6 h-6 text-accent-dk"></i>
         </div>
         <h4 class="font-serif font-bold text-lg mb-2">Tạo Signature Drink Thương Hiệu</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Xây dựng món đặc trưng riêng — "con gà đẻ trứng vàng" giúp khách nhớ và recommend quán của bạn.</p>
@@ -535,7 +540,7 @@
       <!-- B5 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.16s">
         <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="calculator" class="w-6 h-6 text-primary"></i>
         </div>
         <h4 class="font-serif font-bold text-lg mb-2">File Quản Lý Chi Phí & Định Giá</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Tính đúng giá thành, định giá hợp lý để tối đa hóa lợi nhuận mà không sợ mất khách.</p>
@@ -544,7 +549,7 @@
       <!-- B6 -->
       <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.24s">
         <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
-          
+          <i data-lucide="megaphone" class="w-6 h-6 text-accent-dk"></i>
         </div>
         <h4 class="font-serif font-bold text-lg mb-2">Chiến Lược Marketing Storytelling</h4>
         <p class="text-gray-500 text-sm leading-relaxed">Kể câu chuyện thương hiệu thu hút — tạo nội dung viral, kéo khách mới mà không cần chi nhiều quảng cáo.</p>
@@ -571,26 +576,26 @@
       <div class="reveal">
         <div class="bg-primary rounded-2xl p-6 text-white h-full">
           <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center mb-5">
-            
+            <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
           </div>
           <p class="text-xs tracking-widest uppercase text-white/50 mb-2">Phần 01</p>
           <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Kho Công Thức Đa Dạng</h4>
           <ul class="space-y-2 text-sm text-white/75">
             <li class="flex items-start gap-2">
-              
-              30+ công thức cà phê (cold brew, dirty, latte art...)
+              <i data-lucide="check" class="w-4 h-4 text-white/70 shrink-0 mt-0.5"></i>
+              15+ công thức cà phê (cold brew, dirty, latte art...)
             </li>
             <li class="flex items-start gap-2">
-              
-              25+ công thức trà sữa xu hướng
+              <i data-lucide="check" class="w-4 h-4 text-white/70 shrink-0 mt-0.5"></i>
+              15+ công thức trà sữa xu hướng
             </li>
             <li class="flex items-start gap-2">
-              
-              20+ đá xay & smoothie cao cấp
+              <i data-lucide="check" class="w-4 h-4 text-white/70 shrink-0 mt-0.5"></i>
+              15+ đá xay & smoothie cao cấp
             </li>
             <li class="flex items-start gap-2">
-              
-              25+ healthy drinks & mocktail
+              <i data-lucide="check" class="w-4 h-4 text-white/70 shrink-0 mt-0.5"></i>
+              15+ healthy drinks & mocktail
             </li>
           </ul>
         </div>
@@ -600,25 +605,25 @@
       <div class="reveal" style="transition-delay:.1s">
         <div class="bg-accent rounded-2xl p-6 text-white h-full">
           <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center mb-5">
-            
+            <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
           </div>
           <p class="text-xs tracking-widest uppercase text-white/60 mb-2">Phần 02</p>
           <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Chiến Lược Menu & Kinh Doanh</h4>
           <ul class="space-y-2 text-sm text-white/80">
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/80 shrink-0 mt-0.5"></i>
               Phân tích khẩu vị khách theo vùng
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/80 shrink-0 mt-0.5"></i>
               Xây dựng signature drink thương hiệu
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/80 shrink-0 mt-0.5"></i>
               Thiết kế menu tăng doanh thu
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/80 shrink-0 mt-0.5"></i>
               File tính giá thành & lợi nhuận
             </li>
           </ul>
@@ -629,25 +634,25 @@
       <div class="reveal" style="transition-delay:.2s">
         <div class="bg-ink rounded-2xl p-6 text-white h-full">
           <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-5">
-            
+            <i data-lucide="megaphone" class="w-5 h-5 text-white"></i>
           </div>
           <p class="text-xs tracking-widest uppercase text-white/40 mb-2">Phần 03</p>
           <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Marketing & Tăng Doanh Thu</h4>
           <ul class="space-y-2 text-sm text-white/65">
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/60 shrink-0 mt-0.5"></i>
               Storytelling thương hiệu F&B
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/60 shrink-0 mt-0.5"></i>
               Chiến lược bán trên Food App
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/60 shrink-0 mt-0.5"></i>
               Content viral cho mạng xã hội
             </li>
             <li class="flex items-start gap-2">
-              
+              <i data-lucide="check" class="w-4 h-4 text-white/60 shrink-0 mt-0.5"></i>
               7 chiến lược marketing F&B hiệu quả
             </li>
           </ul>
@@ -692,26 +697,26 @@
           <!-- Credentials -->
           <div class="space-y-3 mb-8">
             <div class="flex items-start gap-3">
-              
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
               <p class="text-sm text-gray-700"><strong>Đồng sáng lập</strong> CoffeeTree — đào tạo & setup chuyên nghiệp</p>
             </div>
             <div class="flex items-start gap-3">
-              
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
               <p class="text-sm text-gray-700"><strong>10 năm</strong> đào tạo pha chế & vận hành quán cà phê chuyên nghiệp</p>
             </div>
             <div class="flex items-start gap-3">
-              
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
               <p class="text-sm text-gray-700"><strong>Setup thành công</strong> 50+ quán cà phê trên toàn quốc</p>
             </div>
             <div class="flex items-start gap-3">
-              
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
               <p class="text-sm text-gray-700"><strong>Chuyên gia</strong> xây dựng menu, định giá & marketing F&B</p>
             </div>
           </div>
 
           <a href="#order-form" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-primary-dk transition-all shadow-md">
             Đặt Sách Từ Chị Thu Ngay
-            
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
@@ -845,8 +850,8 @@
           <span class="text-6xl font-serif font-black text-primary">399.000</span>
           <span class="text-2xl font-bold text-primary mb-2">đ</span>
         </div>
-        <p class="text-sm text-primary font-semibold mt-1">
-          
+        <p class="text-sm text-primary font-semibold mt-1 flex items-center justify-center gap-1">
+          <i data-lucide="tag" class="w-4 h-4"></i>
           Giảm thêm 10% khi chuyển khoản trước
         </p>
       </div>
@@ -860,17 +865,17 @@
         <div class="space-y-3">
           <div class="flex items-start gap-3">
             <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-              
+              <i data-lucide="check" class="w-3 h-3 text-primary"></i>
             </div>
             <div>
               <p class="font-semibold text-sm">📗 Sách "Bí Quyết Pha Chế Sáng Tạo"</p>
-              <p class="text-xs text-gray-400">100+ công thức đã kiểm chứng thực tế</p>
+              <p class="text-xs text-gray-400">60+ công thức đã kiểm chứng thực tế</p>
             </div>
           </div>
 
           <div class="flex items-start gap-3">
             <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-              
+              <i data-lucide="check" class="w-3 h-3 text-primary"></i>
             </div>
             <div class="flex-1">
               <div class="flex items-center gap-2 mb-0.5">
@@ -883,7 +888,7 @@
 
           <div class="flex items-start gap-3">
             <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-              
+              <i data-lucide="check" class="w-3 h-3 text-primary"></i>
             </div>
             <div class="flex-1">
               <div class="flex items-center gap-2 mb-0.5">
@@ -904,23 +909,24 @@
       </div>
 
       <!-- CTA -->
-      <a href="mailto:nguyentrucanhkhoi@gmail.com?subject=Đặt Sách Bí Quyết Pha Chế&body=Tôi muốn đặt sách. Tên: | SĐT: | Địa chỉ: | Số lượng:"
+      <a href="tel:0906702230"
         class="group flex items-center justify-center gap-3 w-full bg-primary hover:bg-primary-dk text-white py-5 rounded-2xl font-black text-xl transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 mb-4">
-        Đặt Sách Ngay
+        <i data-lucide="phone" class="w-6 h-6"></i>
+        Gọi Đặt Sách: 0906 702 230
       </a>
 
       <!-- Secondary info -->
       <div class="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 mt-6">
         <div>
-          
+          <i data-lucide="shield-check" class="w-5 h-5 text-primary mx-auto mb-1"></i>
           <p>Hoàn tiền<br/>nếu không hài lòng</p>
         </div>
         <div>
-          
+          <i data-lucide="truck" class="w-5 h-5 text-primary mx-auto mb-1"></i>
           <p>Giao hàng<br/>COD toàn quốc</p>
         </div>
         <div>
-          
+          <i data-lucide="users" class="w-5 h-5 text-primary mx-auto mb-1"></i>
           <p>Nhóm hỗ trợ<br/>học viên riêng</p>
         </div>
       </div>
@@ -946,11 +952,11 @@
       <!-- Success message (hidden by default) -->
       <div id="form-success" class="hidden text-center py-8">
         <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          
+          <i data-lucide="check-circle" class="w-8 h-8 text-primary"></i>
         </div>
         <h3 class="font-serif text-2xl font-bold text-primary mb-2">Đặt Sách Thành Công!</h3>
         <p class="text-gray-500 text-sm">Cảm ơn bạn! Chúng tôi sẽ liên hệ xác nhận trong vòng <strong>30 phút</strong>.</p>
-        <p class="text-gray-500 text-sm mt-1">Hoặc email: <a href="mailto:nguyentrucanhkhoi@gmail.com" class="text-primary font-bold">nguyentrucanhkhoi@gmail.com</a></p>
+        <p class="text-gray-500 text-sm mt-2">Hoặc liên hệ trực tiếp: <a href="tel:0906702230" class="text-primary font-bold">0906 702 230</a></p>
       </div>
 
       <form id="order-form-el" onsubmit="submitOrder(event)" class="space-y-5">
@@ -1021,7 +1027,7 @@
         <!-- Submit -->
         <button type="submit"
           class="w-full flex items-center justify-center gap-3 bg-primary hover:bg-primary-dk text-white py-4 rounded-2xl font-black text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-          
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
           Xác Nhận Đặt Sách Ngay
         </button>
 
@@ -1121,9 +1127,10 @@
     <!-- Final CTA -->
     <div class="mt-14 text-center reveal">
       <p class="text-gray-500 mb-5 text-lg">Còn câu hỏi? Liên hệ trực tiếp ngay!</p>
-      <a href="mailto:nguyentrucanhkhoi@gmail.com"
+      <a href="tel:0906702230"
         class="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 rounded-full font-black text-lg hover:bg-primary-dk transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
-        nguyentrucanhkhoi@gmail.com
+        <i data-lucide="phone" class="w-6 h-6"></i>
+        0906 702 230
       </a>
     </div>
   </div>
@@ -1147,13 +1154,13 @@
         </p>
         <div class="flex gap-3 mt-5">
           <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
-            
+            <i data-lucide="facebook" class="w-4 h-4"></i>
           </a>
           <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
-            
+            <i data-lucide="instagram" class="w-4 h-4"></i>
           </a>
           <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
-            
+            <i data-lucide="youtube" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
@@ -1175,19 +1182,19 @@
         <p class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-5">Liên hệ</p>
         <ul class="space-y-4 text-sm text-gray-300">
           <li class="flex items-center gap-3">
-            
-            <a href="mailto:nguyentrucanhkhoi@gmail.com" class="hover:text-white transition-colors font-semibold">nguyentrucanhkhoi@gmail.com</a>
+            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+            <a href="tel:0906702230" class="hover:text-white transition-colors font-semibold">0906 702 230</a>
           </li>
           <li class="flex items-start gap-3">
-            
+            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
             <span>CoffeeTree — Đào tạo & Setup Chuyên Nghiệp</span>
           </li>
         </ul>
 
-        <a href="#pricing"
+        <a href="tel:0906702230"
           class="mt-6 inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dk transition-all">
-          Đặt Sách Ngay
-          
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          Gọi Đặt Sách Ngay
         </a>
       </div>
     </div>
@@ -1208,9 +1215,9 @@
     <p class="text-xs text-gray-500">Sách Bí Quyết Pha Chế</p>
     <p class="font-black text-primary text-lg leading-none">399.000đ</p>
   </div>
-  <a href="#order-form"
+  <a href="tel:0906702230"
     class="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-full font-bold text-sm">
-    
+    <i data-lucide="phone" class="w-4 h-4"></i>
     Đặt Ngay
   </a>
 </div>
@@ -1335,25 +1342,13 @@
       return;
     }
 
-    // Build WhatsApp / SMS message
-    const msg = encodeURIComponent(
-      `ĐẶT SÁCH PHA CHẾ COFFEETREE\n` +
-      `━━━━━━━━━━━━━━━━━━\n` +
-      `Tên: ${name}\n` +
-      `SĐT: ${phone}\n` +
-      `Địa chỉ: ${address}\n` +
-      `Số lượng: ${qty} cuốn\n` +
-      `Thành tiền: ${(qty * 399000).toLocaleString('vi-VN')}đ (COD)\n` +
-      (note ? `Ghi chú: ${note}` : '')
-    );
-
-    // Open SMS / Zalo to shop number
-    window.location.href = `mailto:nguyentrucanhkhoi@gmail.com?subject=${encodeURIComponent('ĐẶT SÁCH PHA CHẾ COFFEETREE')}&body=${msg}`;
-
     // Show success state
     document.getElementById('order-form-el').classList.add('hidden');
     document.getElementById('form-success').classList.remove('hidden');
   }
+
+  // Init Lucide icons
+  lucide.createIcons();
 </script>
 
 </body>
