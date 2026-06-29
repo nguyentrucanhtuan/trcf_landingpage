@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sách Pha Chế | 100+ Công Thức Hot Trend | CoffeeTree</title>
+  <meta name="description" content="Bí quyết pha chế sáng tạo thức uống xu hướng mới — 100+ công thức từ Founder Gardénia Coffee & Royaltea Việt Nam." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:       '#00704a',
+            'primary-dk':  '#005538',
+            'primary-lt':  '#1a8a5a',
+            accent:        '#cba258',
+            'accent-dk':   '#a8863d',
+            cream:         '#f7f4ed',
+            'cream-dk':    '#eeebe2',
+            ink:           '#1a1a1a',
+          },
+          fontFamily: {
+            serif: ['Oswald', 'sans-serif'],
+            sans:  ['Lato', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background-color: #f7f4ed; color: #1a1a1a; }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 0.01em; }
+
+    /* Navbar on scroll */
+    .nav-scrolled {
+      background: rgba(247, 244, 237, 0.96) !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(36px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(36px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* Gradient text */
+    .grad-text {
+      background: linear-gradient(135deg, #00704a 0%, #cba258 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Book mockup */
+    .book-cover {
+      background: linear-gradient(145deg, #00704a 0%, #003d28 100%);
+      box-shadow: -10px 10px 40px rgba(0,0,0,0.35), inset -4px 0 10px rgba(0,0,0,0.25);
+      border-radius: 6px 12px 12px 6px;
+    }
+    .book-spine {
+      background: linear-gradient(to right, #002a1a, #003d28);
+      border-radius: 4px 0 0 4px;
+    }
+
+    /* Badge pulse */
+    @keyframes badge-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+    .pulse-badge { animation: badge-pulse 2.4s ease-in-out infinite; }
+
+    /* Floating animation */
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .float { animation: float 4s ease-in-out infinite; }
+
+    /* FAQ accordion */
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s ease; }
+    .faq-body.open { max-height: 320px; }
+    .faq-icon { transition: transform .3s ease; }
+    .faq-icon.open { transform: rotate(180deg); }
+
+    /* Pricing card highlight */
+    .pricing-main { box-shadow: 0 0 0 3px #00704a, 0 24px 64px rgba(0,112,74,.18); }
+
+    /* Mobile menu */
+    #mobile-nav { display: none; }
+    #mobile-nav.open { display: block; }
+
+    /* Section divider wave */
+    .wave-top { margin-bottom: -2px; }
+
+    /* Testimonial card */
+    .testi-card:hover { transform: translateY(-4px); }
+
+    /* Counter */
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Bonus badge */
+    .bonus-tag {
+      background: linear-gradient(135deg, #cba258, #a8863d);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    /* Sticky CTA bar */
+    #sticky-bar {
+      transform: translateY(100%);
+      transition: transform .4s ease;
+    }
+    #sticky-bar.visible { transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-cream text-ink overflow-x-hidden">
+
+<!-- =============================================
+     NAVBAR
+============================================= -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-1">
+      <span class="text-2xl font-serif font-black text-primary">Gar</span>
+      <span class="text-2xl font-serif font-black text-accent">Plus</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+      <a href="#benefits" class="hover:text-primary transition-colors">Nội dung</a>
+      <a href="#detail"   class="hover:text-primary transition-colors">Bên trong sách</a>
+      <a href="#author"   class="hover:text-primary transition-colors">Tác giả</a>
+      <a href="#pricing"  class="hover:text-primary transition-colors">Đặt sách</a>
+      <a href="#faq"      class="hover:text-primary transition-colors">FAQ</a>
+    </div>
+
+    <!-- Desktop CTA + Mobile hamburger -->
+    <div class="flex items-center gap-3">
+      <a href="#pricing" class="hidden md:flex items-center gap-2 bg-primary hover:bg-primary-dk text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all hover:shadow-lg">
+        Đặt Mua Ngay <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+      <button id="hamburger-btn" class="md:hidden text-ink p-1" onclick="toggleMobileMenu()">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-nav" class="md:hidden mt-3 mx-0 bg-white rounded-2xl shadow-xl border border-cream-dk overflow-hidden">
+    <div class="flex flex-col p-6 gap-4 text-base font-semibold">
+      <a href="#benefits" onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary transition">Nội dung sách</a>
+      <a href="#detail"   onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary transition">Bên trong sách</a>
+      <a href="#author"   onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary transition">Tác giả</a>
+      <a href="#pricing"  onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary transition">Đặt sách</a>
+      <a href="#faq"      onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary transition">FAQ</a>
+      <a href="#pricing"  onclick="toggleMobileMenu()" class="bg-primary text-white py-3 px-6 rounded-full text-center font-bold mt-2">
+        Đặt Mua Ngay — 399.000đ →
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- =============================================
+     HERO
+============================================= -->
+<section class="min-h-screen flex items-center pt-24 pb-16 px-6 relative overflow-hidden"
+  style="background: radial-gradient(ellipse at 70% 30%, rgba(0,112,74,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(203,162,88,0.08) 0%, transparent 60%), #f7f4ed;">
+
+  <!-- Decorative blobs -->
+  <div class="absolute top-20 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
+    style="background: radial-gradient(circle, #00704a, transparent); filter: blur(60px);"></div>
+  <div class="absolute bottom-20 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
+    style="background: radial-gradient(circle, #cba258, transparent); filter: blur(50px);"></div>
+
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- LEFT: Content -->
+      <div class="animate__animated animate__fadeInLeft">
+        <!-- Label -->
+        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary rounded-full px-4 py-1.5 text-sm font-bold mb-6">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          Sách Pha Chế Thực Chiến #1 Việt Nam
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-5xl lg:text-[3.2rem] font-serif font-black leading-[1.15] mb-6">
+          Biến Quán Của Bạn Thành
+          <span class="grad-text"> Điểm Check-in</span>
+          <br/>Được Yêu Thích
+        </h1>
+
+        <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+          <strong class="text-ink">100+ công thức pha chế hot trend</strong> — cà phê, trà sữa, đá xay, healthy drinks.
+          Bí quyết từ người sáng lập <em>Gardénia Coffee</em> và <em>Royaltea Việt Nam</em> với 10 năm thực chiến.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="#pricing"
+            class="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dk text-white px-8 py-4 rounded-full font-black text-lg transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 transform">
+            Đặt Mua Ngay — 399.000đ
+            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="#benefits"
+            class="flex items-center justify-center gap-2 border-2 border-primary/40 text-primary hover:border-primary hover:bg-primary/5 px-8 py-4 rounded-full font-bold text-base transition-all">
+            Xem Nội Dung
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </a>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-primary"></i>Cam kết hoàn tiền
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="truck" class="w-4 h-4 text-primary"></i>Ship COD toàn quốc
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="gift" class="w-4 h-4 text-accent"></i>Quà tặng 5.000.000đ
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Book Mockup -->
+      <div class="flex justify-center animate__animated animate__fadeInRight">
+        <div class="relative float">
+
+          <!-- Book -->
+          <div class="relative inline-flex">
+            <!-- Spine -->
+            <div class="book-spine w-5 h-[22rem]"></div>
+
+            <!-- Cover -->
+            <div class="book-cover w-56 h-[22rem] md:w-64 md:h-96 flex flex-col items-center justify-between p-8 text-white text-center relative overflow-hidden">
+              <!-- Top line -->
+              <div class="absolute top-5 left-5 right-5 h-px bg-white/20"></div>
+              <div class="absolute bottom-5 left-5 right-5 h-px bg-white/20"></div>
+
+              <!-- Top -->
+              <div>
+                <p class="text-xs tracking-[.25em] uppercase text-white/50 mb-1">CoffeeTree Books</p>
+              </div>
+
+              <!-- Center -->
+              <div>
+                <div class="mb-4">
+                  <span class="text-5xl">☕</span>
+                </div>
+                <div class="w-10 h-0.5 bg-accent mx-auto mb-4"></div>
+                <h3 class="font-serif text-xl font-bold leading-snug mb-2">Bí Quyết Pha Chế<br/>Sáng Tạo</h3>
+                <p class="text-xs text-white/60 italic font-light">Thức Uống Xu Hướng Mới</p>
+              </div>
+
+              <!-- Bottom -->
+              <div class="border border-white/25 rounded-lg px-4 py-1.5 w-full">
+                <p class="text-xs text-white/70">Nguyễn Gia Bảo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badge: 100+ -->
+          <div class="pulse-badge absolute -top-5 -right-5 bg-accent text-white rounded-full w-20 h-20 flex flex-col items-center justify-center shadow-xl text-center">
+            <span class="text-2xl font-black leading-none">100+</span>
+            <span class="text-[10px] font-semibold leading-tight">Công thức</span>
+          </div>
+
+          <!-- Mini card: bonuses -->
+          <div class="absolute -bottom-5 -left-8 bg-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3 border border-cream-dk">
+            <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+              <i data-lucide="gift" class="w-5 h-5 text-accent"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500">Tặng kèm</p>
+              <p class="text-sm font-black text-ink">4 Bonus</p>
+              <p class="text-xs text-primary font-semibold">trị giá 5.000.000đ</p>
+            </div>
+          </div>
+
+          <!-- Star ratings card -->
+          <div class="absolute -top-3 -left-10 bg-white rounded-2xl px-4 py-2.5 shadow-xl border border-cream-dk">
+            <div class="flex gap-0.5 mb-1">
+              <span class="text-accent text-sm">★★★★★</span>
+            </div>
+            <p class="text-xs text-gray-500">+500 chủ quán tin dùng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
+      <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk">
+        <p class="text-4xl font-serif font-black text-primary num" data-target="10">0</p>
+        <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Năm kinh nghiệm</p>
+      </div>
+      <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk" style="transition-delay:.1s">
+        <p class="text-4xl font-serif font-black text-primary num" data-target="50">0</p>
+        <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Quán đã setup</p>
+      </div>
+      <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk" style="transition-delay:.2s">
+        <p class="text-4xl font-serif font-black text-primary num" data-target="100">0</p>
+        <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Công thức độc quyền</p>
+      </div>
+      <div class="reveal bg-white rounded-2xl p-5 text-center shadow-sm border border-cream-dk" style="transition-delay:.3s">
+        <p class="text-4xl font-serif font-black text-primary">3</p>
+        <p class="text-xs text-gray-500 mt-1 font-semibold uppercase tracking-wide">Chuỗi thương hiệu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     PROBLEM — Nỗi đau
+============================================= -->
+<section class="py-20 px-6 bg-ink text-white relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute inset-0 opacity-5 pointer-events-none"
+    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 30px 30px;"></div>
+
+  <div class="max-w-5xl mx-auto relative">
+    <!-- Tag -->
+    <div class="text-center mb-4">
+      <span class="inline-block bg-red-500/20 text-red-400 border border-red-500/30 rounded-full px-4 py-1 text-sm font-bold">
+        Bạn có đang gặp phải...?
+      </span>
+    </div>
+
+    <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-4 reveal">
+      Những Vấn Đề Khiến Quán Của Bạn
+      <span class="text-red-400"> Không Thể Tăng Trưởng</span>
+    </h2>
+    <p class="text-gray-400 text-center mb-14 max-w-xl mx-auto reveal">
+      Hơn 80% chủ quán cà phê tại Việt Nam đang mắc phải ít nhất 3 trong số những vấn đề này.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <!-- Pain 1 -->
+      <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition">
+        <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+          <i data-lucide="trending-down" class="w-5 h-5 text-red-400"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-1">Menu nhàm chán, khách không quay lại</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Đồ uống giống hàng xóm, không có điểm nổi bật. Khách thử 1 lần rồi không nhớ đến quán.</p>
+        </div>
+      </div>
+      <!-- Pain 2 -->
+      <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.1s">
+        <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+          <i data-lucide="dollar-sign" class="w-5 h-5 text-red-400"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-1">Định giá mò mẫm, lợi nhuận thấp</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Không biết tính giá thành thực tế. Bán nhiều nhưng lợi nhuận vẫn ít hoặc thậm chí thua lỗ.</p>
+        </div>
+      </div>
+      <!-- Pain 3 -->
+      <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.15s">
+        <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+          <i data-lucide="frown" class="w-5 h-5 text-red-400"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-1">Không có signature drink riêng</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Thiếu món đặc trưng để khách nhớ và recommend. Không có "con gà đẻ trứng vàng" cho quán.</p>
+        </div>
+      </div>
+      <!-- Pain 4 -->
+      <div class="reveal flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition" style="transition-delay:.2s">
+        <div class="shrink-0 w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+          <i data-lucide="megaphone-off" class="w-5 h-5 text-red-400"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-1">Marketing yếu, ít khách mới</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Không biết cách kể câu chuyện thương hiệu. Đăng bài đều đặn nhưng lượt tiếp cận vẫn thấp.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow down -->
+    <div class="text-center mt-12">
+      <div class="inline-flex flex-col items-center gap-2 text-gray-500">
+        <p class="text-sm font-medium">Cuốn sách này giải quyết TẤT CẢ những vấn đề trên</p>
+        <i data-lucide="chevrons-down" class="w-6 h-6 text-accent animate-bounce"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     SOLUTION
+============================================= -->
+<section class="py-20 px-6 bg-cream relative">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left visual -->
+      <div class="reveal-left order-2 md:order-1">
+        <div class="relative">
+          <div class="bg-primary rounded-3xl p-8 text-white">
+            <p class="text-xs tracking-widest uppercase text-white/60 mb-4">Giải pháp toàn diện</p>
+            <h3 class="font-serif text-2xl font-bold mb-6 leading-snug">Từ Công Thức → Chiến Lược → Marketing</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i>
+                </div>
+                <p class="text-white/80 text-sm leading-relaxed">100+ công thức đã kiểm chứng tại 3 chuỗi thương hiệu thực tế</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i>
+                </div>
+                <p class="text-white/80 text-sm leading-relaxed">Hệ thống quản lý chi phí & định giá đồ uống</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i>
+                </div>
+                <p class="text-white/80 text-sm leading-relaxed">Chiến lược xây dựng menu bán hàng & signature drink</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-white"></i>
+                </div>
+                <p class="text-white/80 text-sm leading-relaxed">Marketing storytelling thu hút khách hàng mới liên tục</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating label -->
+          <div class="absolute -bottom-5 -right-5 bg-accent text-white rounded-2xl px-5 py-3 shadow-xl">
+            <p class="text-xs font-semibold opacity-80">Tiết kiệm</p>
+            <p class="text-2xl font-black">5–10 năm</p>
+            <p class="text-xs opacity-80">kinh nghiệm thực chiến</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right text -->
+      <div class="reveal-right order-1 md:order-2">
+        <span class="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-sm font-bold mb-5">
+          Giải pháp
+        </span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-5 leading-snug">
+          Cuốn Sách Thực Chiến Từ Người Đã
+          <span class="text-primary"> Xây Dựng 3 Chuỗi Thương Hiệu</span>
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Không phải lý thuyết sách vở — đây là những gì <strong>Nguyễn Gia Bảo</strong> đã thực sự làm để đưa Gardénia Coffee, Royaltea Việt Nam và Milligram từ 0 lên chuỗi quán thành công.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Mỗi công thức, mỗi chiến lược đều đã được <em>kiểm chứng thực tế</em> tại hơn 50 quán cà phê trên khắp Việt Nam.
+        </p>
+        <a href="#pricing" class="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-bold hover:bg-primary-dk transition-all shadow-md hover:shadow-lg">
+          Tôi Muốn Cuốn Sách Này
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     BENEFITS
+============================================= -->
+<section id="benefits" class="py-20 px-6" style="background: linear-gradient(180deg, #f7f4ed 0%, #eef6f1 100%);">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-sm font-bold mb-4">
+        Lợi ích thực tế
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold reveal">
+        Bạn Nhận Được Gì Từ Cuốn Sách Này?
+      </h2>
+      <p class="text-gray-500 mt-3 max-w-lg mx-auto reveal">
+        Không chỉ là công thức — đây là bộ công cụ hoàn chỉnh để kinh doanh F&B thành công.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- B1 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card">
+        <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="book-open" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">100+ Công Thức Đa Dạng</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Cà phê, trà sữa, đá xay, healthy drinks — tất cả xu hướng hot nhất 2024, sẵn sàng áp dụng ngay.</p>
+      </div>
+
+      <!-- B2 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.08s">
+        <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="target" class="w-6 h-6 text-accent"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">Đọc Vị Khẩu Vị Khách Hàng</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Biết khách muốn gì trước khi họ nói — nghệ thuật tạo trải nghiệm uống khiến họ muốn quay lại.</p>
+      </div>
+
+      <!-- B3 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.16s">
+        <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="layout-list" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">Xây Dựng Menu Chiến Lược</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Menu không chỉ đẹp mà còn được thiết kế để tăng giá trị đơn hàng trung bình và lợi nhuận.</p>
+      </div>
+
+      <!-- B4 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.08s">
+        <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="star" class="w-6 h-6 text-accent"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">Tạo Signature Drink Thương Hiệu</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Xây dựng món đặc trưng riêng — "con gà đẻ trứng vàng" giúp khách nhớ và recommend quán của bạn.</p>
+      </div>
+
+      <!-- B5 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.16s">
+        <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="calculator" class="w-6 h-6 text-primary"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">File Quản Lý Chi Phí & Định Giá</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Tính đúng giá thành, định giá hợp lý để tối đa hóa lợi nhuận mà không sợ mất khách.</p>
+      </div>
+
+      <!-- B6 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md hover:-translate-y-1 transition-all testi-card" style="transition-delay:.24s">
+        <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-5">
+          <i data-lucide="megaphone" class="w-6 h-6 text-accent"></i>
+        </div>
+        <h4 class="font-serif font-bold text-lg mb-2">Chiến Lược Marketing Storytelling</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Kể câu chuyện thương hiệu thu hút — tạo nội dung viral, kéo khách mới mà không cần chi nhiều quảng cáo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     DETAIL — Bên trong sách
+============================================= -->
+<section id="detail" class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-sm font-bold mb-4">
+        Nội dung bên trong
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold reveal">Những Gì Bạn Sẽ Khám Phá</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Part 1 -->
+      <div class="reveal">
+        <div class="bg-primary rounded-2xl p-6 text-white h-full">
+          <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+          </div>
+          <p class="text-xs tracking-widest uppercase text-white/50 mb-2">Phần 01</p>
+          <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Kho Công Thức Đa Dạng</h4>
+          <ul class="space-y-2 text-sm text-white/75">
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-accent"></i>
+              30+ công thức cà phê (cold brew, dirty, latte art...)
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-accent"></i>
+              25+ công thức trà sữa xu hướng
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-accent"></i>
+              20+ đá xay & smoothie cao cấp
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-accent"></i>
+              25+ healthy drinks & mocktail
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Part 2 -->
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="bg-accent rounded-2xl p-6 text-white h-full">
+          <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="bar-chart-3" class="w-5 h-5 text-white"></i>
+          </div>
+          <p class="text-xs tracking-widest uppercase text-white/60 mb-2">Phần 02</p>
+          <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Chiến Lược Menu & Kinh Doanh</h4>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-white"></i>
+              Phân tích khẩu vị khách theo vùng
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-white"></i>
+              Xây dựng signature drink thương hiệu
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-white"></i>
+              Thiết kế menu tăng doanh thu
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-white"></i>
+              File tính giá thành & lợi nhuận
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Part 3 -->
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="bg-ink rounded-2xl p-6 text-white h-full">
+          <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
+          </div>
+          <p class="text-xs tracking-widest uppercase text-white/40 mb-2">Phần 03</p>
+          <h4 class="font-serif font-bold text-lg mb-4 leading-snug">Marketing & Tăng Doanh Thu</h4>
+          <ul class="space-y-2 text-sm text-white/65">
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-primary"></i>
+              Storytelling thương hiệu F&B
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-primary"></i>
+              Chiến lược bán trên Food App
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-primary"></i>
+              Content viral cho mạng xã hội
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-primary"></i>
+              7 chiến lược marketing F&B hiệu quả
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     AUTHOR — Tác giả
+============================================= -->
+<section id="author" class="py-20 px-6 bg-cream-dk">
+  <div class="max-w-5xl mx-auto">
+    <div class="bg-white rounded-3xl shadow-sm border border-cream-dk overflow-hidden">
+      <div class="grid md:grid-cols-5 gap-0">
+        <!-- Avatar side -->
+        <div class="md:col-span-2 bg-primary relative flex items-end justify-center pt-12 pb-0 px-8">
+          <div class="text-center pb-0">
+            <!-- Avatar placeholder -->
+            <div class="w-40 h-40 rounded-full bg-white/20 border-4 border-white/30 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <span class="text-7xl">👩‍🍳</span>
+            </div>
+            <p class="text-white font-serif font-bold text-xl mb-1">Nguyễn Gia Bảo</p>
+            <p class="text-white/70 text-sm italic mb-6">"Chị Giáo Dạy Pha Chế"</p>
+          </div>
+        </div>
+
+        <!-- Content side -->
+        <div class="md:col-span-3 p-8 lg:p-12 reveal-right">
+          <span class="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-sm font-bold mb-5">
+            Về tác giả
+          </span>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold mb-5 leading-snug">
+            10 Năm Biến Đam Mê Pha Chế Thành <span class="text-primary">Chuỗi Thương Hiệu</span>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Nguyễn Gia Bảo bắt đầu với niềm đam mê pha chế và đã xây dựng thành công 3 thương hiệu F&B được yêu thích. Mỗi trang sách là tinh hoa từ hàng nghìn giờ thực chiến tại bếp và quầy bar.
+          </p>
+
+          <!-- Credentials -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-start gap-3">
+              <i data-lucide="badge-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-sm text-gray-700"><strong>Founder</strong> Gardénia Coffee • Royaltea Việt Nam • Milligram</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="badge-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-sm text-gray-700"><strong>Co-Founder</strong> CoffeeTree — đào tạo & setup chuyên nghiệp</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="badge-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-sm text-gray-700"><strong>Giải Nhất</strong> cuộc thi "Sáng Tạo Thức Uống cùng Syrup Hestia"</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="badge-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-sm text-gray-700"><strong>10 năm</strong> kinh nghiệm xây dựng và phát triển thức uống xu hướng</p>
+            </div>
+          </div>
+
+          <a href="#pricing" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-primary-dk transition-all shadow-md">
+            Học Bí Quyết Từ Chị Giáo Ngay
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     SOCIAL PROOF — Testimonials
+============================================= -->
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-accent/15 text-accent-dk border border-accent/25 rounded-full px-4 py-1 text-sm font-bold mb-4">
+        Khách hàng nói gì
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold reveal">
+        Chủ Quán Trên Khắp Việt Nam Đã Thay Đổi
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- T1 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md transition-all testi-card">
+        <div class="flex gap-0.5 mb-4">
+          <span class="text-accent">★★★★★</span>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6 italic">
+          "Mình đã tăng doanh thu 35% chỉ sau 2 tháng áp dụng công thức và chiến lược menu trong sách. Cái hay nhất là phần định giá — trước đây mình bán nhiều mà không hiểu sao vẫn không có lời."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary/15 rounded-full flex items-center justify-center font-bold text-primary">TN</div>
+          <div>
+            <p class="font-bold text-sm text-ink">Trà Nguyên</p>
+            <p class="text-xs text-gray-400">Chủ quán café • Hà Nội</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- T2 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md transition-all testi-card" style="transition-delay:.1s">
+        <div class="flex gap-0.5 mb-4">
+          <span class="text-accent">★★★★★</span>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6 italic">
+          "Trước khi mở quán mình lo lắng lắm, không biết gọi món nào. Đọc xong cuốn này mình tự tin xây cả menu với 2 signature drink riêng. Khách check-in và tag quán mỗi ngày!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/15 rounded-full flex items-center justify-center font-bold text-accent-dk">MH</div>
+          <div>
+            <p class="font-bold text-sm text-ink">Minh Hiếu</p>
+            <p class="text-xs text-gray-400">Chủ quán mới • TP.HCM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- T3 -->
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-cream-dk hover:shadow-md transition-all testi-card" style="transition-delay:.2s">
+        <div class="flex gap-0.5 mb-4">
+          <span class="text-accent">★★★★★</span>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6 italic">
+          "Quán mình đã mở 3 năm nhưng doanh thu tháng nào cũng giậm chân. Sau khi áp dụng chiến lược marketing trong sách, lượng khách mới tăng 60% chỉ trong 6 tuần."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary/15 rounded-full flex items-center justify-center font-bold text-primary">PL</div>
+          <div>
+            <p class="font-bold text-sm text-ink">Phương Linh</p>
+            <p class="text-xs text-gray-400">Chủ quán 3 năm • Đà Nẵng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust numbers -->
+    <div class="mt-14 grid grid-cols-3 gap-4 max-w-2xl mx-auto text-center">
+      <div class="reveal">
+        <p class="text-3xl font-serif font-black text-primary">500+</p>
+        <p class="text-xs text-gray-500 mt-1 font-medium">Chủ quán tin dùng</p>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <p class="text-3xl font-serif font-black text-primary">4.9<span class="text-accent">★</span></p>
+        <p class="text-xs text-gray-500 mt-1 font-medium">Đánh giá trung bình</p>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <p class="text-3xl font-serif font-black text-primary">98%</p>
+        <p class="text-xs text-gray-500 mt-1 font-medium">Khách hàng hài lòng</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     PRICING
+============================================= -->
+<section id="pricing" class="py-20 px-6 bg-ink text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5 pointer-events-none"
+    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 30px 30px;"></div>
+
+  <div class="max-w-5xl mx-auto relative">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-accent/20 text-accent border border-accent/30 rounded-full px-4 py-1 text-sm font-bold mb-4">
+        Đặt sách ngay
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold reveal">
+        Đầu Tư Một Lần,<br/>Thu Lại Mãi Mãi
+      </h2>
+    </div>
+
+    <!-- Main pricing card -->
+    <div class="max-w-2xl mx-auto pricing-main bg-white text-ink rounded-3xl p-8 md:p-12 reveal relative">
+      <!-- Best value badge -->
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+        <span class="bg-primary text-white px-6 py-1.5 rounded-full text-sm font-black shadow-lg">
+          🔥 Bán Chạy Nhất
+        </span>
+      </div>
+
+      <!-- Product name -->
+      <div class="text-center mb-8">
+        <h3 class="font-serif text-2xl font-bold mb-2">Bí Quyết Pha Chế Sáng Tạo Thức Uống Xu Hướng Mới</h3>
+        <p class="text-gray-500 text-sm">Sách vật lý · Giao COD toàn quốc</p>
+      </div>
+
+      <!-- Price -->
+      <div class="text-center mb-8">
+        <p class="text-gray-400 line-through text-lg mb-1">Giá bìa: 599.000đ</p>
+        <div class="flex items-end justify-center gap-2">
+          <span class="text-6xl font-serif font-black text-primary">399.000</span>
+          <span class="text-2xl font-bold text-primary mb-2">đ</span>
+        </div>
+        <p class="text-sm text-primary font-semibold mt-1">
+          <i data-lucide="tag" class="w-4 h-4 inline mr-1"></i>
+          Giảm thêm 10% khi chuyển khoản trước
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-dashed border-gray-200 my-8"></div>
+
+      <!-- What's included -->
+      <div class="mb-8">
+        <p class="font-bold text-sm text-gray-500 uppercase tracking-widest mb-5">Bạn nhận được:</p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">📗 Sách "Bí Quyết Pha Chế Sáng Tạo"</p>
+              <p class="text-xs text-gray-400">100+ công thức đã kiểm chứng thực tế</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-0.5">
+                <p class="font-semibold text-sm">🎁 Bộ biểu mẫu ứng dụng</p>
+                <span class="bonus-tag">Tặng kèm</span>
+              </div>
+              <p class="text-xs text-gray-400">File quản lý chi phí, định giá, lên menu — trị giá 1.000.000đ</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-0.5">
+                <p class="font-semibold text-sm">🎓 Khóa học Chiến lược bán hàng Food App</p>
+                <span class="bonus-tag">Tặng kèm</span>
+              </div>
+              <p class="text-xs text-gray-400">Trị giá 2.000.000đ</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-0.5">
+                <p class="font-semibold text-sm">📸 Khóa học Quay chụp F&B</p>
+                <span class="bonus-tag">Tặng kèm</span>
+              </div>
+              <p class="text-xs text-gray-400">Trị giá 1.500.000đ</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-0.5">
+                <p class="font-semibold text-sm">📱 Ebook "7 Chiến Lược Marketing F&B"</p>
+                <span class="bonus-tag">Tặng kèm</span>
+              </div>
+              <p class="text-xs text-gray-400">Trị giá 500.000đ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total value -->
+      <div class="bg-cream rounded-2xl p-4 mb-8 text-center">
+        <p class="text-sm text-gray-500 mb-1">Tổng giá trị bạn nhận được</p>
+        <p class="text-2xl font-serif font-black text-primary">5.599.000đ</p>
+        <p class="text-sm text-gray-500">Chỉ với <strong class="text-ink">399.000đ</strong></p>
+      </div>
+
+      <!-- CTA -->
+      <a href="tel:0789457299"
+        class="group flex items-center justify-center gap-3 w-full bg-primary hover:bg-primary-dk text-white py-5 rounded-2xl font-black text-xl transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 mb-4">
+        <i data-lucide="phone" class="w-6 h-6"></i>
+        Đặt Sách Ngay: 0789 457 299
+      </a>
+
+      <!-- Secondary info -->
+      <div class="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 mt-6">
+        <div>
+          <i data-lucide="shield-check" class="w-5 h-5 text-primary mx-auto mb-1"></i>
+          <p>Hoàn tiền<br/>nếu không hài lòng</p>
+        </div>
+        <div>
+          <i data-lucide="truck" class="w-5 h-5 text-primary mx-auto mb-1"></i>
+          <p>Giao hàng<br/>COD toàn quốc</p>
+        </div>
+        <div>
+          <i data-lucide="users" class="w-5 h-5 text-primary mx-auto mb-1"></i>
+          <p>Nhóm hỗ trợ<br/>học viên riêng</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     FAQ
+============================================= -->
+<section id="faq" class="py-20 px-6 bg-cream">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-sm font-bold mb-4">
+        Câu hỏi thường gặp
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold reveal">Giải Đáp Thắc Mắc</h2>
+    </div>
+
+    <div class="space-y-4">
+      <!-- FAQ 1 -->
+      <div class="reveal bg-white rounded-2xl border border-cream-dk shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between gap-4 p-6 text-left font-bold hover:text-primary transition-colors">
+          <span>Sách có phù hợp với người chưa có kinh nghiệm pha chế không?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 faq-icon text-gray-400"></i>
+        </button>
+        <div class="faq-body px-6">
+          <p class="pb-6 text-gray-600 text-sm leading-relaxed">
+            Hoàn toàn phù hợp! Sách được viết từ cơ bản đến nâng cao, với hướng dẫn từng bước chi tiết. Người mới bắt đầu sẽ nắm được nền tảng, còn người đã có kinh nghiệm sẽ học được những kỹ thuật và chiến lược nâng cao hơn.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="reveal bg-white rounded-2xl border border-cream-dk shadow-sm overflow-hidden" style="transition-delay:.05s">
+        <button onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between gap-4 p-6 text-left font-bold hover:text-primary transition-colors">
+          <span>Tôi chưa có quán, mua sách có ích không?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 faq-icon text-gray-400"></i>
+        </button>
+        <div class="faq-body px-6">
+          <p class="pb-6 text-gray-600 text-sm leading-relaxed">
+            Rất có ích! Đây là cơ hội vàng để học trước khi đầu tư. Bạn sẽ biết cách lên menu, tính chi phí, định giá và chiến lược marketing ngay từ ngày đầu mở quán — tránh được những sai lầm tốn kém mà nhiều chủ quán gặp phải.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="reveal bg-white rounded-2xl border border-cream-dk shadow-sm overflow-hidden" style="transition-delay:.1s">
+        <button onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between gap-4 p-6 text-left font-bold hover:text-primary transition-colors">
+          <span>Sách giao hàng trong bao lâu và khu vực nào?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 faq-icon text-gray-400"></i>
+        </button>
+        <div class="faq-body px-6">
+          <p class="pb-6 text-gray-600 text-sm leading-relaxed">
+            Giao hàng COD toàn quốc. Nội thành TP.HCM và Hà Nội 1–2 ngày, tỉnh thành khác 3–5 ngày làm việc. Bạn có thể thanh toán khi nhận hàng — hoàn toàn không rủi ro!
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="reveal bg-white rounded-2xl border border-cream-dk shadow-sm overflow-hidden" style="transition-delay:.15s">
+        <button onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between gap-4 p-6 text-left font-bold hover:text-primary transition-colors">
+          <span>Sau khi mua sách có được hỗ trợ thêm không?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 faq-icon text-gray-400"></i>
+        </button>
+        <div class="faq-body px-6">
+          <p class="pb-6 text-gray-600 text-sm leading-relaxed">
+            Có! Bạn sẽ được tham gia nhóm học viên riêng với chuyên viên đào tạo của CoffeeTree. Tại đây bạn có thể đặt câu hỏi, chia sẻ kết quả và học hỏi từ cộng đồng chủ quán cùng chí hướng.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="reveal bg-white rounded-2xl border border-cream-dk shadow-sm overflow-hidden" style="transition-delay:.2s">
+        <button onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between gap-4 p-6 text-left font-bold hover:text-primary transition-colors">
+          <span>Chính sách hoàn trả như thế nào?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 faq-icon text-gray-400"></i>
+        </button>
+        <div class="faq-body px-6">
+          <p class="pb-6 text-gray-600 text-sm leading-relaxed">
+            Chúng tôi cam kết hoàn tiền 100% nếu bạn không hài lòng với nội dung. Sách còn nguyên vẹn, liên hệ hotline trong vòng 7 ngày sau khi nhận hàng để được hỗ trợ đổi/trả.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="mt-14 text-center reveal">
+      <p class="text-gray-500 mb-5 text-lg">Còn câu hỏi? Liên hệ trực tiếp ngay!</p>
+      <a href="tel:0789457299"
+        class="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 rounded-full font-black text-lg hover:bg-primary-dk transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        Gọi: 0789 457 299
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer class="bg-ink text-white py-12 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+      <!-- Brand -->
+      <div>
+        <a href="#" class="inline-flex items-center gap-1 mb-4">
+          <span class="text-2xl font-serif font-black text-primary">Gar</span>
+          <span class="text-2xl font-serif font-black text-accent">Plus</span>
+        </a>
+        <p class="text-sm text-gray-400 leading-relaxed max-w-xs">
+          Nền tảng đào tạo & setup quán cà phê chuyên nghiệp hàng đầu Việt Nam. Đồng hành cùng 50+ thương hiệu F&B trên toàn quốc.
+        </p>
+        <div class="flex gap-3 mt-5">
+          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-xl flex items-center justify-center transition-colors">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-5">Khám phá</p>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a href="#benefits" class="hover:text-white transition-colors">Nội dung sách</a></li>
+          <li><a href="#detail" class="hover:text-white transition-colors">Bên trong sách</a></li>
+          <li><a href="#author" class="hover:text-white transition-colors">Về tác giả</a></li>
+          <li><a href="#pricing" class="hover:text-white transition-colors">Đặt sách</a></li>
+          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="font-bold text-sm uppercase tracking-widest text-gray-400 mb-5">Liên hệ</p>
+        <ul class="space-y-4 text-sm text-gray-300">
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+            <a href="tel:0789457299" class="hover:text-white transition-colors font-semibold">0789 457 299</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+            <span>CoffeeTree — Đào tạo & Setup Chuyên Nghiệp</span>
+          </li>
+        </ul>
+
+        <a href="#pricing"
+          class="mt-6 inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-dk transition-all">
+          Đặt Sách Ngay
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <p>© 2024 CoffeeTree. All rights reserved.</p>
+      <p class="italic">"Biến đồ uống thành lợi nhuận, biến đam mê thành kết quả"</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =============================================
+     STICKY BOTTOM CTA (mobile)
+============================================= -->
+<div id="sticky-bar" class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-cream-dk shadow-2xl px-4 py-3 flex items-center gap-3">
+  <div class="flex-1">
+    <p class="text-xs text-gray-500">Sách Bí Quyết Pha Chế</p>
+    <p class="font-black text-primary text-lg leading-none">399.000đ</p>
+  </div>
+  <a href="tel:0789457299"
+    class="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-full font-bold text-sm">
+    <i data-lucide="phone" class="w-4 h-4"></i>
+    Đặt Ngay
+  </a>
+</div>
+
+
+<!-- =============================================
+     JAVASCRIPT
+============================================= -->
+<script>
+  // Init Lucide icons
+  lucide.createIcons();
+
+  // Navbar on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-nav');
+    menu.classList.toggle('open');
+  }
+
+  // Scroll reveal with Intersection Observer
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // Counter animation
+  function animateCounter(el, target, duration = 1500) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        el.textContent = target + '+';
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(start);
+      }
+    }, 16);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = parseInt(entry.target.dataset.target);
+        animateCounter(entry.target, target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.num').forEach(el => counterObserver.observe(el));
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const body = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = body.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-body.open').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.faq-icon.open').forEach(i => i.classList.remove('open'));
+
+    // Open clicked if it was closed
+    if (!isOpen) {
+      body.classList.add('open');
+      icon.classList.add('open');
+    }
+  }
+
+  // Sticky bar visibility
+  const stickyBar = document.getElementById('sticky-bar');
+  const heroSection = document.querySelector('section');
+  const stickyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  stickyObserver.observe(heroSection);
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
